@@ -1,4 +1,5 @@
 import WelcomeImg from "../Components/WelcomeImg";
+import { Link } from "react-router-dom";
 
 const Welcome = () => {
   return (
@@ -13,10 +14,11 @@ const Welcome = () => {
       </p>
       <div className="bg-white h-1 w-[50px] absolute mt-[-53px] ml-[0%]"></div>
       <div className="flex justify-center items-end mt-[-53px] h-[600px] w-[100%] absolute">
-            <div className="absolute bg-[#F1C40E] w-[160px] h-[60px] rounded-[30px] text-center flex justify-center animate-ping" />
+        <div className="absolute bg-[#F1C40E] w-[160px] h-[60px] rounded-[30px] text-center flex justify-center animate-ping" />
         <div className="absolute bg-[#F1C40E] w-[210px] h-[60px] rounded-[30px] text-center flex justify-center font-bold text-lg">
-
-          <button>START TRAINING</button>
+          <Link to='/home'>
+            <button className="mt-[15px]">START TRAINING</button>
+          </Link>
         </div>
       </div>
       <WelcomeImg image="../wc.jpg" className="" />
