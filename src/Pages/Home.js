@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ImageFetch from "../Data/ImageFetch";
 import MinorImg from "../Data/MinorImg";
+import { Link } from "react-router-dom";
+import { BsFillStarFill } from "react-icons/bs";
 
 const Home = () => {
   const [workouts, setWorkouts] = useState([]);
@@ -65,13 +67,22 @@ const Home = () => {
           <div key={workout.id}>{workout.className}</div>
         ))} */}
       <div>
-        <div className="flex justify-center h-[400px] mt-[50px]">
-          <ImageFetch className="relative" />
-          <div className="flex w-[300px] h-20 bg-[#F1C40E] absolute rounded-bl-2xl rounded-tr-[60px] self-end mr-[19.5%]" />
-          <div className="flex absolute self-end font-bold text-xl mr-[35%] mb-[8%]">
-            {workouts}
+        <Link to="/lowerabsworkout">
+          <div className="flex justify-center h-[400px] mt-[50px]">
+            <ImageFetch className="relative" />
+            <div className="flex w-[300px] h-20 bg-[#F1C40E] absolute rounded-bl-2xl rounded-tr-[60px] self-end mr-[19.5%]" />
+            <div className="flex absolute self-end font-bold text-xl mr-[35%] mb-[10%]">
+              {workouts}
+              <div className="flex absolute mt-[35px] gap-2">
+                <BsFillStarFill />
+                <BsFillStarFill />
+                <BsFillStarFill />
+                <BsFillStarFill />
+                <BsFillStarFill />
+              </div>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
       <div>
         <div className="flex mt-[30px] ml-[30px]">
@@ -80,19 +91,52 @@ const Home = () => {
         <div className="whitespace-nowrap overflow-x-auto">
           <div className="flex mt-[20px] ml-[40px] relative">
             <MinorImg className="relative" />
-            <div className="flex w-[170px] h-[60px] bg-[#F1C40E] absolute rounded-bl-2xl rounded-tr-[60px] self-end ml-[-3.9%]" />
-            <div className="flex absolute self-end font-bold text-[11px] ml-[-2%] mb-[8%]">
-              {workouts2}
+            <div>
+              <Link to="/weightworkout">
+                <div className="flex w-[170px] h-[60px] bg-[#F1C40E] absolute rounded-bl-2xl rounded-tr-[60px] self-end ml-[-104%] mt-[28.7%]" />
+                <div className="flex absolute self-end font-bold text-[11px] ml-[-102%] mt-[33%]">
+                  {workouts2}
+                  <div className="flex absolute mt-[20px] ml-[5px] gap-2">
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                  </div>
+                </div>
+              </Link>
             </div>
 
-            <div className="flex w-[170px] h-[60px] bg-[#F1C40E] absolute rounded-bl-2xl rounded-tr-[60px] self-end ml-[50.9%]" />
-            <div className="flex absolute self-end font-bold text-sm ml-[52.5%] mb-[8%]">
-              {workouts3}
+            <div>
+              <Link to="/aerobatics">
+                <div className="flex w-[170px] h-[60px] bg-[#F1C40E] absolute rounded-bl-2xl rounded-tr-[60px] self-end ml-[-49%] mt-[28.7%]" />
+                <div className="flex absolute self-end font-bold text-sm ml-[-45%] mt-[31%]">
+                  {workouts3}
+                  <div className="flex absolute mt-[25px] ml-[0px] gap-2">
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                  </div>
+                </div>
+              </Link>
             </div>
 
-            <div className="flex w-[170px] h-[60px] bg-[#F1C40E] absolute rounded-bl-2xl rounded-tr-[60px] self-end ml-[106%]" />
-            <div className="flex absolute self-end font-bold text-[12px] ml-[108%] mb-[8%]">
-              {workouts4}
+            <div>
+              <Link to="/cycling">
+                <div className="flex w-[170px] h-[60px] bg-[#F1C40E] absolute rounded-bl-2xl rounded-tr-[60px] self-end ml-[6%] mt-[28.7%]" />
+                <div className="flex absolute self-end font-bold text-[12px] ml-[8%] mt-[31%]">
+                  {workouts4}
+                  <div className="flex absolute mt-[25px] ml-[5px] gap-2">
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                    <BsFillStarFill />
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

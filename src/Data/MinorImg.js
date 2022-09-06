@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom"
 
 const imageUrl = "http://localhost:4000/file-bucket/1583694085563weights1.jpg";
 const image1Url = "http://localhost:4000/file-bucket/1583694079221aerobics1.jpg";

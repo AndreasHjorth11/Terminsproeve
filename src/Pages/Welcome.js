@@ -16,7 +16,7 @@ const Welcome = () => {
       <div className="flex justify-center items-end mt-[-53px] h-[600px] w-[100%] absolute">
         <div className="absolute bg-[#F1C40E] w-[160px] h-[60px] rounded-[30px] text-center flex justify-center animate-ping" />
         <div className="absolute bg-[#F1C40E] w-[210px] h-[60px] rounded-[30px] text-center flex justify-center font-bold text-lg">
-          <Link to='/home'>
+          <Link to='/login'>
             <button className="mt-[15px]">START TRAINING</button>
           </Link>
         </div>
