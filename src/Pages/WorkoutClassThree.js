@@ -14,7 +14,6 @@ const WorkoutClassThree = () => {
   const [worktime, setWorktime] = useState([]);
   const [workdesc, setWorkdesc] = useState([]);
   const [worktrainer, setWorktrainer] = useState([]);
-  const [trainerimg, setTrainerimg] = useState([]);
   const [img, setImg] = useState();
   const navigate = useNavigate();
 
@@ -29,13 +28,11 @@ const WorkoutClassThree = () => {
     axios
       .get("http://localhost:4000/api/v1/classes/2")
       .then((res) => {
-        console.log(res.data.className);
         setWorkouts(res.data.className);
         setWorkday(res.data.classDay);
         setWorktime(res.data.classTime);
         setWorkdesc(res.data.classDescription);
         setWorktrainer(res.data.trainer.trainerName);
-        setTrainerimg(res.data.trainer.assetId);
         fetchImage();
       })
       .catch((err) => {});

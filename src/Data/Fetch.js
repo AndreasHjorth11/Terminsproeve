@@ -8,7 +8,6 @@ const Fetch = () => {
     axios
       .get("http://localhost:4000/api/v1/classes")
       .then((res) => {
-        console.log(res);
         setClasses(res.data);
       })
       .catch((err) => {});

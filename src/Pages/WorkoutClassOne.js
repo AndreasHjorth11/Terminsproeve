@@ -28,7 +28,6 @@ const WorkoutClassOne = () => {
     axios
       .get("http://localhost:4000/api/v1/classes/4")
       .then((res) => {
-        console.log(res.data.className);
         setWorkouts(res.data.className);
         setWorkday(res.data.classDay);
         setWorktime(res.data.classTime);

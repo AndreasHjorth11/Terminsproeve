@@ -13,7 +13,7 @@ const BurgerMenu = () => {
 
       <div className="font-bold text-3xl grid grid-cols-1 gap-[40px] content-center h-[100%]">
         <Link to="/home"><p>Home</p></Link>
-        <p>Search</p>
+        <Link to="/search"><p>Search</p></Link>
         <p>Schedule</p>
         <Link to="/login"><p>Log out</p></Link>
       </div>
