@@ -9,6 +9,7 @@ import WorkoutClassOne from "./Pages/WorkoutClassOne";
 import WorkoutClassTwo from "./Pages/WorkoutClassTwo";
 import WorkoutClassThree from "./Pages/WorkoutClassThree";
 import WorkoutClassFour from "./Pages/WorkoutClassFour";
+import Search from "./Pages/Search";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route exact path='/aerobatics' element={<WorkoutClassThree />} />
         <Route exact path='/cycling' element={<WorkoutClassFour />} />
         <Route exact path='/home/submenu' element={<BurgerMenu />} />
+        <Route exact path='/search' element={<Search />} />
       </Routes>
       <Fetch />
 

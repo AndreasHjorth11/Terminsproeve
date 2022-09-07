@@ -15,7 +15,6 @@ const Home = () => {
     axios
       .get("http://localhost:4000/api/v1/classes/4")
       .then((res) => {
-        console.log(res.data.className);
         setWorkouts(res.data.className);
       })
       .catch((err) => {});
@@ -27,7 +26,6 @@ const Home = () => {
     axios
       .get("http://localhost:4000/api/v1/classes/1")
       .then((res) => {
-        console.log(res.data.className);
         setWorkouts2(res.data.className);
       })
       .catch((err) => {});
@@ -39,7 +37,6 @@ const Home = () => {
     axios
       .get("http://localhost:4000/api/v1/classes/2")
       .then((res) => {
-        console.log(res.data.className);
         setWorkouts3(res.data.className);
       })
       .catch((err) => {});
@@ -51,7 +48,6 @@ const Home = () => {
     axios
       .get("http://localhost:4000/api/v1/classes/3")
       .then((res) => {
-        console.log(res.data.className);
         setWorkouts4(res.data.className);
       })
       .catch((err) => {});
