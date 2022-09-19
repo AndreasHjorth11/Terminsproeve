@@ -10,24 +10,26 @@ import WorkoutClassTwo from "./Pages/WorkoutClassTwo";
 import WorkoutClassThree from "./Pages/WorkoutClassThree";
 import WorkoutClassFour from "./Pages/WorkoutClassFour";
 import Search from "./Pages/Search";
+import { AuthContextProvider } from "./Context/Authcontext";
 
 const App = () => {
   return (
-    <div className="App">
-      <Routes>
-        <Route exact path='/' element={<Welcome />} />
-        <Route exact path='/login' element={<Login />} />
-        <Route exact path='/home' element={<Home />} />
-        <Route exact path='/lowerabsworkout' element={<WorkoutClassOne />} />
-        <Route exact path='/weightworkout' element={<WorkoutClassTwo />} />
-        <Route exact path='/aerobatics' element={<WorkoutClassThree />} />
-        <Route exact path='/cycling' element={<WorkoutClassFour />} />
-        <Route exact path='/home/submenu' element={<BurgerMenu />} />
-        <Route exact path='/search' element={<Search />} />
-      </Routes>
-      <Fetch />
-
-    </div>
+    <AuthContextProvider>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<Welcome />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/lowerabsworkout" element={<WorkoutClassOne />} />
+          <Route exact path="/weightworkout" element={<WorkoutClassTwo />} />
+          <Route exact path="/aerobatics" element={<WorkoutClassThree />} />
+          <Route exact path="/cycling" element={<WorkoutClassFour />} />
+          <Route exact path="/home/submenu" element={<BurgerMenu />} />
+          <Route exact path="/search" element={<Search />} />
+        </Routes>
+        <Fetch />
+      </div>
+    </AuthContextProvider>
   );
 };
 
